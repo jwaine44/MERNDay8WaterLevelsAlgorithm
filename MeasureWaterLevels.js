@@ -40,11 +40,13 @@ function measureWaterLevels(waterLevels) {
     let listRaises = [];
 
     for (let y = 1; y < waterLevels.length; y++) {
+        // if there is a rise
         if (waterLevels[y - 1] < waterLevels[y]) {
             let tempraise = waterLevels[y] - waterLevels[y - 1]
             currentRaise = currentRaise+tempraise
             tempraise = 0;
         }
+        // if there is a drop
         if (waterLevels[y - 1] > waterLevels[y]) {
             if (currentRaise > 0) {
                 listRaises.push(currentRaise)
