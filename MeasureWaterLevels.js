@@ -43,7 +43,7 @@ function measureWaterLevels(waterLevels) {
         // if there is a rise
         if (waterLevels[y - 1] < waterLevels[y]) {
             let tempraise = waterLevels[y] - waterLevels[y - 1]
-            currentRaise = currentRaise+tempraise
+            currentRaise = currentRaise + tempraise
             tempraise = 0;
         }
         // if there is a drop
